@@ -30,3 +30,10 @@ body{
     /* border : none; */
 
 }
+#character-list{
+    max-width: 600px;
+    background-color: yellow;
+    height: 200px;
+    margin: auto;
+
+}
