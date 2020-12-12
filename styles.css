@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    max-width: 700px;
+    margin: auto;
+    background-color: #efefef;
+    /* margin: 1rem;
+    padding: 1rem; */
+    text-align: center;
+}
+
+.div-search{
+    max-width: 600px;
+    margin : auto;
+    /* background-color: yellow; */
+    height: 100px;    
+}
+.div-search__input{
+    width: 400px;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-family: 'Montserrat';
+}
+.div-search__button{
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    /* border : none; */
+
+}
