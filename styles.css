@@ -32,8 +32,12 @@ body{
 }
 #character-list{
     max-width: 600px;
-    background-color: yellow;
-    height: 200px;
+    /* background-color: yellow; */
+    /* height: 200px; */
     margin: auto;
 
+}
+.character-list__single{
+    margin: 1rem;
+    padding: 1rem;
 }

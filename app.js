@@ -10,8 +10,18 @@ const url = "https://breakingbadapi.com/api/characters";
 
 
 function displayData(data) {
-    console.log(data[0].name);
-    characterListDiv.innerText = (data[0].name);
+    // console.log(data[0].name);
+    // characterListDiv.innerText = (data[0].name);
+    for (let i = 0; i < 10; i++) {
+        console.log(data[i].name)
+        // characterListDiv.innerText = data[i].name;
+        var character = document.createElement("div");
+        character.className = 'character-list__single';
+
+        console.log(characterListDiv.appendChild(character))
+        var single = characterListDiv.appendChild(character);
+        single.innerText = data[i].name;
+    }
 }
 
 function getSearchString() {
@@ -30,6 +40,4 @@ searchButton.addEventListener('click', getSearchString);
             console.log(json);
             displayData(json);
         })
-
-
 })();
