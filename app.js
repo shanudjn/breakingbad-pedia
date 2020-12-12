@@ -13,14 +13,28 @@ function displayData(data) {
     // console.log(data[0].name);
     // characterListDiv.innerText = (data[0].name);
     for (let i = 0; i < 10; i++) {
-        console.log(data[i].name)
+        console.log(data[i].name);
         // characterListDiv.innerText = data[i].name;
+
+        //create element with class
         var character = document.createElement("div");
         character.className = 'character-list__single';
 
-        console.log(characterListDiv.appendChild(character))
+        //console.log(characterListDiv.appendChild(character))
+
+        //create a p tag
+        // var nameParagraphTag = document.createElement('p');
+        // nameParagraphTag.innerText = data[i].name;
+        // console.log(nameParagraphTag)
+
+        // character.appendChild(nameParagraphTag)
+        console.log(character)
+
         var single = characterListDiv.appendChild(character);
-        single.innerText = data[i].name;
+        single.innerHTML += `<div><img src=` + data[i].img + `></div>`
+        single.innerHTML += `<div>` + data[i].name;
+        single.innerHTML += `<small> <i>` + data[i].nickname + `</i></small></div>`
+
     }
 }
 
