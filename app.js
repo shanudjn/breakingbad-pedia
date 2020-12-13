@@ -7,10 +7,6 @@ const url = "https://breakingbadapi.com/api/characters";
 const randomUrl = "https://breakingbadapi.com/api/character/random"
 
 
-
-
-
-
 function displayData(data) {
 
     for (let i = 0; i < 10; i++) {
@@ -58,7 +54,6 @@ function getName() {
 
 
 }
-
 
 searchButton.addEventListener('click', getName);
 
