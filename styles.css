@@ -4,10 +4,11 @@ body{
     font-family: 'Montserrat', sans-serif;
     max-width: 700px;
     margin: auto;
-    background-color: #efefef;
+    background-color: #121212;
     /* margin: 1rem;
     padding: 1rem; */
     text-align: center;
+    color: white;
 }
 
 .div-search{
@@ -28,6 +29,8 @@ body{
     padding: 1rem;
     border-radius: 5px;
     /* border : none; */
+    font-family:'Montserrat', sans-serif;
+    font-size: 10px;
 
 }
 #character-list{
@@ -63,6 +66,7 @@ body{
 footer{
     padding: 2rem 1rem;
     text-align: center;
-    color: black;
+    color: white;
+    
 
 }
