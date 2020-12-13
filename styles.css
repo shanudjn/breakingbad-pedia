@@ -31,12 +31,14 @@ body{
 
 }
 #character-list{
-    max-width: 600px;
+    max-width: 400px;
     /* background-color: yellow; */
     /* height: 200px; */
     margin: auto;
+    /* text-align: left; */
 
 }
+
 .character-list__single{
     margin: 1rem;
     padding: 1rem;
@@ -45,5 +47,16 @@ body{
 .character-list__single img{
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    border-radius: 5px;
+    float: left;
+}
+.character-list__single div{
+  /* display: inline; */
+  
+}
+footer{
+    padding: 2rem 1rem;
+    text-align: center;
+    color: black;
+
 }
