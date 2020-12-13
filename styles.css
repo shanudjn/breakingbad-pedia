@@ -54,6 +54,11 @@ body{
   /* display: inline; */
   
 }
+#random-character-list img{
+    border-radius: 6px;
+    width: 200px;
+    height: 200px;
+}
 footer{
     padding: 2rem 1rem;
     text-align: center;
