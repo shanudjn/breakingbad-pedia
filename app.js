@@ -1,6 +1,7 @@
 const searchButton = document.querySelector('.div-search__button');
 const inputElement = document.querySelector('.div-search__input');
 const characterListDiv = document.querySelector('#character-list');
+const randomCharacterDiv = document.querySelector('#random-character-list');
 
 const url = "https://breakingbadapi.com/api/characters";
 const randomUrl = "https://breakingbadapi.com/api/character/random"
@@ -26,20 +27,39 @@ function displayData(data) {
 
     }
 }
+function createRandomElement(randomData, name) {
+    console.log(randomData[0].name);
 
-function getSearchString() {
+    var randomCharacter = document.createElement('p');
+    randomCharacter.innerText = name + ` you are ` + randomData[0].name;
+    console.log(randomCharacter)
+
+    var randomCharacterImage = document.createElement('img');
+    randomCharacterImage.src = randomData[0].img;
+
+    randomCharacterDiv.appendChild(randomCharacterImage);
+    randomCharacterDiv.appendChild(randomCharacter);
+
+}
+
+function getName() {
     var name = (inputElement.value);
+    console.log(name);
+
     var randomCharacterResponse = fetch(randomUrl)
         .then(response => response.json())
         .then(json => {
             console.log(json);
+            createRandomElement(json, name);
         })
     console.log(name);
+
+
 
 }
 
 
-searchButton.addEventListener('click', getSearchString);
+searchButton.addEventListener('click', getName);
 
 (function () {
     console.log("First thing that happens");
