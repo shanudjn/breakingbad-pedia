@@ -27,12 +27,12 @@ function displayData(data) {
 
     }
 }
-function createRandomElement(randomData, name) {
+function createRandomCharacterElement(randomData, name) {
     console.log(randomData[0].name);
 
     var randomCharacter = document.createElement('p');
     randomCharacter.innerText = name + ` you are ` + randomData[0].name;
-    console.log(randomCharacter)
+    //console.log(randomCharacter)
 
     var randomCharacterImage = document.createElement('img');
     randomCharacterImage.src = randomData[0].img;
@@ -46,11 +46,12 @@ function getName() {
     var name = (inputElement.value);
     console.log(name);
 
+    //gets random character from url
     var randomCharacterResponse = fetch(randomUrl)
         .then(response => response.json())
         .then(json => {
             console.log(json);
-            createRandomElement(json, name);
+            createRandomCharacterElement(json, name);
         })
     console.log(name);
 
