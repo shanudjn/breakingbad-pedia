@@ -32,8 +32,8 @@ function displayData(data) {
 
         var single = characterListDiv.appendChild(character);
         single.innerHTML += `<div><img src=` + data[i].img + `></div>`
-        single.innerHTML += `<div>` + data[i].name;
-        single.innerHTML += `<small> <i>` + data[i].nickname + `</i></small></div>`
+        single.innerHTML += `<p>` + data[i].name; + `</p>.`
+        single.innerHTML += `<small> <i>` + data[i].nickname + `</i></small>`
 
     }
 }
