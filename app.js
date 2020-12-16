@@ -25,10 +25,11 @@ function displayData(data) {
 }
 function createRandomCharacterElement(randomData, name) {
     console.log(randomData[0].name);
-
+    console.log(randomData[0].nickname);
     var randomCharacter = document.createElement('p');
     randomCharacter.innerText = name + ` you are ` + randomData[0].name;
     //console.log(randomCharacter)
+
 
     var randomCharacterImage = document.createElement('img');
     randomCharacterImage.src = randomData[0].img;
