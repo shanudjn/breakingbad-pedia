@@ -24,8 +24,6 @@ function displayData(data) {
     }
 }
 function createRandomCharacterElement(randomData, name) {
-    console.log(randomData[0].name);
-    console.log(randomData[0].nickname);
     var randomCharacter = document.createElement('p');
     randomCharacter.innerText = name + ` you are ` + randomData[0].name;
     //console.log(randomCharacter)
@@ -34,6 +32,7 @@ function createRandomCharacterElement(randomData, name) {
     var randomCharacterImage = document.createElement('img');
     randomCharacterImage.src = randomData[0].img;
 
+    randomCharacterDiv.innerHTML = "";
     randomCharacterDiv.appendChild(randomCharacterImage);
     randomCharacterDiv.appendChild(randomCharacter);
 
@@ -58,8 +57,9 @@ function getName() {
 
 searchButton.addEventListener('click', getName);
 
+
+//entry point
 (function () {
-    console.log("First thing that happens");
     var response = fetch(url)
         .then(response => response.json())
         .then(json => {
